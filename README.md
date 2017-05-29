@@ -6,4 +6,4 @@ A set of the libc functions was re-coded, as defined in their man. Libft functio
 
 ## Task
 
-The description of this project is in [pdf](https://github.com/rodionvolovik/libft/blob/master/libft.en.pdprovide
+The description of this project is provided in [pdf](https://github.com/rodionvolovik/libft/blob/master/libft.en.pdf)
