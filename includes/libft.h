@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rvolovik <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rvolovik <rvolovik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/21 12:29:32 by rvolovik          #+#    #+#             */
-/*   Updated: 2016/11/30 17:51:31 by rvolovik         ###   ########.fr       */
+/*   Updated: 2017/06/01 20:25:10 by rvolovik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_stack
+{
+	void			*content;
+	struct s_stack	*next;
+}					t_stack;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -83,5 +89,14 @@ void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+**	additional
+*/
+
+char				**all_delims_split(char *string, int (*compare)(int));
+t_stack				*push(t_stack *head, void *data);
+t_stack				*append(t_stack *head, void *data);
+t_stack				*pop(t_stack **head);
 
 #endif
